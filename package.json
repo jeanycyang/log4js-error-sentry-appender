@@ -1,0 +1,29 @@
+{
+  "name": "error-sentry-appender",
+  "version": "1.0.0",
+  "description": "A log4js appender that sends error-level (or higher) events to Sentry",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanycyang/log4js-error-sentry-appender.git"
+  },
+  "keywords": [
+    "log4j",
+    "log4js",
+    "error",
+    "exception",
+    "exception-monitoring",
+    "sentry",
+    "sentry.io",
+    "error-reporting"
+  ],
+  "author": "Jean Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeanycyang/log4js-error-sentry-appender/issues"
+  },
+  "homepage": "https://github.com/jeanycyang/log4js-error-sentry-appender#readme"
+}
