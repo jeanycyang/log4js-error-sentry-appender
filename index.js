@@ -3,7 +3,7 @@ const Sentry = require('@sentry/node');
 
 function errorSentryAppender(layout, { useCategoryAsFingerprint = false }) {
   return (loggingEvent) => {
-    const { level, data, context, categoryName } = loggingEvent;
+    const { level, data, context, categoryName, pid } = loggingEvent;
     if (level.level >= levels.ERROR.level) {
       const levelStr = level.levelStr.toLowerCase();
       const [error] = data;
@@ -18,6 +18,7 @@ function errorSentryAppender(layout, { useCategoryAsFingerprint = false }) {
         }
         scope.setTag('category', categoryName);
         scope.setLevel(levelStr);
+        scope.setExtra('pid', pid);
       });
       Sentry.captureException(error);
     }

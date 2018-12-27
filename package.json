@@ -1,6 +1,6 @@
 {
   "name": "error-sentry-appender",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A log4js appender that sends error-level (or higher) events to Sentry",
   "main": "index.js",
   "scripts": {
